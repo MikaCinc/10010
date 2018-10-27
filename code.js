@@ -10,9 +10,9 @@ window.onload = function () {
 
     updateTime();
 
-    setTimeout(function(){
+    /* setTimeout(function(){
         alert("Molim te da mi javiš da li si u mogućnosti da dođeš")
-    }, 10000)
+    }, 10000) */
 }
 
 function updateTime() {
