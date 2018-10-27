@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+
+@media (max-width: 575.98px) { 
+    body {
+        background-color: white;
+        text-align: center;
+        width: 95%;
+    }
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: white;
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+header {
+    margin-bottom: 120px;
+}
+
+.header__bg {
+    z-index: -1000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+#blackandwhite {
+    border: 5px solid black;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+
+#number {
+    cursor: pointer;
+    display: inline-block;
+}
+
+#numberInner {
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    z-index: 200;
+    font-size: 32px;
+    line-height: 0px;
+}
+
+.audiowide {
+    font-family: 'Audiowide', cursive;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+#counterDiv {
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+#counter {
+    font-family: 'Inconsolata', monospace;
+    color: black;
+    font-size: 32px;
+    line-height: 0px;
+}
+
+#kadaJeRodj {
+    padding: 5px;
+
+}
+
+.white {
+    color: white;
+}
+
+#title {
+    display: inline-block;
+}
+
+.info {
+    font-size: 20px;
+    margin-top: 0px; 
+    display: inline-block;
+}
+
+.highlight {
+    color: white;
+    background-color: #000;
+    margin: 0px 5px;
+}
+
+.subscript {
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+.subscript:hover {
+    background-color: #000;
+    color: white;
+    transform: skewY(-2deg);
+    transform-origin: top left;
+}
+
+.bot-left { position: relative; } 
+.bot-left:before, .bot-left:after { content: ""; position: absolute; bottom: -3px; left: -3px; } 
+.bot-left:before { top: -3px; width: 3px; background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#000), to(transparent)); background-image: -webkit-linear-gradient(transparent, #000); background-image: -moz-linear-gradient(transparent, #000); background-image: -o-linear-gradient(transparent, #000); } 
+.bot-left:after { right: -3px; height: 3px; background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(transparent)); background-image: -webkit-linear-gradient(left, #000, transparent); background-image: -moz-linear-gradient(left, #000, transparent); background-image: -o-linear-gradient(left, #000, transparent); }
+.knockout-around { 
+    position: relative; 
+    padding: 20px;
+    border-radius: 5px;
+} 
+.knockout-around:before, .knockout-around:after { content: ""; position: absolute; } 
+.knockout-around:before { 
+    top: -3px; left: -3px; right: -3px; bottom: -3px; 
+    background-image: -webkit-gradient(radial, bottom left, 10, 90% 0%, 150, from(#fff), to(transparent)); 
+    background-image: -webkit-radial-gradient(bottom left, 120% 110%, #fff, transparent); 
+    background-image: -moz-radial-gradient(bottom left, farthest-corner, #fff 20%, transparent 80%); 
+    z-index: -2; } 
+.knockout-around:after { top: 0; left: 0; bottom: 0; right: 0; background: black; z-index: -1; }
+
+.knockout-around-on-white { 
+    position: relative; 
+    padding: 20px;
+    border-radius: 5px;
+} 
+.knockout-around-on-white:before, .knockout-around-on-white:after { content: ""; position: absolute; } 
+.knockout-around-on-white:before { 
+    top: -3px; left: -3px; right: -3px; bottom: -3px; 
+    background-image: -webkit-gradient(radial, top right, 10, 90% 0%, 150, from(#000), to(transparent)); 
+    background-image: -webkit-radial-gradient(top right, 120% 110%, #000, transparent); 
+    background-image: -moz-radial-gradient(top right, farthest-corner, #000 20%, transparent 80%); 
+    z-index: -2; } 
+.knockout-around-on-white:after { top: 0; left: 0; bottom: 0; right: 0; background: white; z-index: -1; }
