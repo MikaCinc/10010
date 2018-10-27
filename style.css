@@ -86,6 +86,8 @@ header {
 #kadaJeRodj {
     font-size: 18px;
     padding: 5px 0px;
+    word-spacing: 0px;
+    letter-spacing: 1px;
 }
 
 .white {
