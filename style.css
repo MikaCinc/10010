@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Miniver');
 
 
 @media (max-width: 575.98px) { 
@@ -76,11 +77,13 @@ header {
     margin-bottom: 7px;
 }
 
-#counter {
+.counter {
     font-family: 'Inconsolata', monospace;
     color: black;
     font-size: 32px;
     line-height: 0px;
+    word-spacing: 3px;
+    letter-spacing: 7px;
 }
 
 #kadaJeRodj {
@@ -108,6 +111,13 @@ header {
     color: white;
     background-color: #000;
     margin: 0px 5px;
+}
+
+#mikac_inc {
+	position: fixed;
+    bottom: 0;
+    left: 3;
+    font-family: 'Miniver', cursive;
 }
 
 .subscript {

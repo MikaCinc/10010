@@ -5,22 +5,26 @@ window.onload = function () {
 
     vidiMapu();
 
-    animate2("party", "PARTY", "// PARTY /");
+    animate2("party", "DRESS CODE", "// DRESS CODE /");
     animate2("kadaJeRodj", "> Do 18-og novembra u 20h <", "< Do 18-og novembra u 20h >");
+    mikac_inc();
 
     updateTime();
 
-    /* setTimeout(function(){
-        alert("Molim te da mi javiš da li si u mogućnosti da dođeš")
-    }, 10000) */
+    setTimeout(function(){
+        alert("> Molim te da mi javiš da li si u mogućnosti da dođeš \n > Obavezno dođi obučen u crno, belo ili crno-belo")
+    }, 10000)
 }
 
 function updateTime() {
-    var timeInterval = setInterval(function() {
+    var timeInterval = setInterval(function () {
         var date = moment('2018.11.18 20:00:00', 'YYYY.MM.DD HH:mm:ss');
         var now = moment();
-    
-        document.getElementById("counter").innerHTML = moment(date - now).format('DD [ dana ] HH:mm:ss');
+
+        var final = moment(date - now).subtract(2, 'day');
+
+        document.getElementById("counterDay").innerHTML = `${final.format('DD')} dana`
+        document.getElementById("counterHHmmss").innerHTML = `${final.format('HH:mm:ss')}`
     })
 }
 
@@ -69,17 +73,17 @@ function vidiMapu() {
     }, true)
 }
 
-function party() {
-    /* var text = "ARTY"
-	var i = 0
-	var intervalParty = setInterval(function() {
-			document.getElementById("party").appendChild(document.createTextNode(text[i]))
-			i+=1
-			if(i>text.length){
-				document.getElementById("party").innerHTML = "P"
-				i = 0
-			}
-    }, 500) */
+function mikac_inc() {
+    var text = "mikac_inc"
+    var i = 0
+    var intervalParty = setInterval(function () {
+        document.getElementById("mikac_inc_span").appendChild(document.createTextNode(text[i]))
+        i += 1
+        if (i > text.length) {
+            document.getElementById("mikac_inc_span").innerHTML = ""
+            i = 0
+        }
+    }, 500)
 }
 
 function animate2(id, first, second) {
