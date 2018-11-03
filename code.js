@@ -22,7 +22,7 @@ window.onload = function () {
 
 function updateTime() {
     var timeInterval = setInterval(function () {
-        var date = moment('2018.11.18 20:00:00', 'YYYY.MM.DD HH:mm:ss');
+        var date = moment('2018.11.18 19:00:00', 'YYYY.MM.DD HH:mm:ss');
         var now = moment();
 
         var final = moment(date - now).subtract(1, 'day');
