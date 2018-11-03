@@ -12,12 +12,12 @@ window.onload = function () {
 
     updateTime();
 
-    /* setTimeout(function () {
+    setTimeout(function () {
         alert("> Molim te da mi javiš da li si u mogućnosti da dođeš \n> Obavezno dođi obučen u crno, belo ili crno-belo");
         setTimeout(function () {
             alert("> Obavezno dođi obučen u crno, belo ili crno-belo")
         }, 5000)
-    }, 5000) */
+    }, 5000)
 }
 
 function updateTime() {
