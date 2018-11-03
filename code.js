@@ -5,15 +5,19 @@ window.onload = function () {
 
     vidiMapu();
 
+    //animate3("numberInner")
     animate2("party", "DRESS CODE", "// DRESS CODE /");
     animate2("kadaJeRodj", "> Do 18-og novembra u 20h <", "< Do 18-og novembra u 20h >");
     mikac_inc();
 
     updateTime();
 
-    setTimeout(function(){
-        alert("> Molim te da mi javiš da li si u mogućnosti da dođeš \n > Obavezno dođi obučen u crno, belo ili crno-belo")
-    }, 10000)
+    /* setTimeout(function () {
+        alert("> Molim te da mi javiš da li si u mogućnosti da dođeš \n> Obavezno dođi obučen u crno, belo ili crno-belo");
+        setTimeout(function () {
+            alert("> Obavezno dođi obučen u crno, belo ili crno-belo")
+        }, 5000)
+    }, 5000) */
 }
 
 function updateTime() {
@@ -21,7 +25,7 @@ function updateTime() {
         var date = moment('2018.11.18 20:00:00', 'YYYY.MM.DD HH:mm:ss');
         var now = moment();
 
-        var final = moment(date - now).subtract(2, 'day');
+        var final = moment(date - now).subtract(1, 'day');
 
         document.getElementById("counterDay").innerHTML = `${final.format('DD')} dana`
         document.getElementById("counterHHmmss").innerHTML = `${final.format('HH:mm:ss')}`
@@ -40,17 +44,16 @@ function hover10010() {
         inner.innerHTML = "10010-ti";
         flag = false;
     }, true)
-    div.onclick = function () {
-        console.log("clicked")
+    div.addEventListener("click", function () {
         if (flag) {
             inner.innerHTML = "10010-ti";
-            flag = !flag;
+            flag = false;
         }
         else {
             inner.innerHTML = "18-ti";
-            flag = !flag;
+            flag = true;
         }
-    }
+    }, true)
 }
 
 function changeTitle() {
@@ -98,4 +101,14 @@ function animate2(id, first, second) {
         }, 500)
         document.getElementById(id).innerHTML = s
     }, 1000)
+}
+
+function animate3(id) {
+    var s = document.getElementById(id);
+    var interval = setInterval(function () {
+        s.style.fontSize = "30px";
+        var timeout = setTimeout(function () {
+            s.style.fontSize = "32px";
+        }, 1000)
+    }, 2000)
 }
