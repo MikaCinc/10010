@@ -22,14 +22,21 @@ window.onload = function () {
 
 function updateTime() {
     var timeInterval = setInterval(function () {
-        var date = moment('2018.11.18 19:00:00', 'YYYY.MM.DD HH:mm:ss');
+        var date = moment('20:00:00', 'HH:mm:ss');
         var now = moment();
 
-        var final = moment(date - now).subtract(1, 'day');
+        var finalH = date.diff(now, "hours");
+        var finalM = date.diff(now, "minutes");
+        var finalS = date.diff(now, "seconds");
 
-        document.getElementById("counterDay").innerHTML = `${final.format('DD')} dana`
-        document.getElementById("counterHHmmss").innerHTML = `${final.format('HH:mm:ss')}`
-    })
+        document.getElementById("counterDay").style.display = "none"
+        if(finalS >= 0) {
+            document.getElementById("counterHHmmss").innerHTML = finalS + "s";
+        } else {
+            document.getElementById("counterHHmmss").innerHTML = "10010 started";
+        }
+        
+    }, 1000)
 }
 
 function hover10010() {
